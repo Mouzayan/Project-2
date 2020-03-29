@@ -1,5 +1,5 @@
 
-![Alt Text](https://media.giphy.com/media/9PyUrkqAQEzXxuaxfo/giphy.gif|width=100%)
+![Alt Text](https://media.giphy.com/media/9PyUrkqAQEzXxuaxfo/giphy.gif|width=500)
 
 ![Alt Text](https://media.giphy.com/media/TIQweO4t9mhaz9w5j1/giphy.gif)
 
