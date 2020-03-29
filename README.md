@@ -5,27 +5,27 @@
 
 ### Overview
 
-_**Refrigerator Haiku** is inspired by the popular refrigerator magnet game, rendered here in a digital and interactive way. It is an application that serves the user a selection of random words which they can arrange into  a haiku poem.
-After completing one round, the user hits a subscription wall in order to get a fresh selection of words for creating another poem._
+**Refrigerator Haiku** is inspired by the popular refrigerator magnet game, rendered here in a digital and interactive way. It is an application that serves the user a selection of random words which they can arrange into  a haiku poem.
+After completing one round, the user hits a subscription wall in order to get a fresh selection of words for creating another poem.
 
 <br>
 
 ### Wireframes
-
-> Use the Wireframes section to display desktop, tablet and mobile views.
-
-![Dummy Link](url)
-
-- Desktop Landing
+<!-- 
+> Use the Wireframes section to display desktop, tablet and mobile views. -->
 
 ![Dummy Link](url)
 
-- Desktop Body
+- Desktop page 
 
 ![Dummy Link](url)
 
-- Desktop Resource Index
+- Tablet page
 
+![Dummy Link](url)
+
+- Mobile page
+<!-- 
 ![Dummy Link](url)
 
 - Desktop Resource Show
@@ -36,7 +36,7 @@ After completing one round, the user hits a subscription wall in order to get a 
 
 ![Dummy Link](url)
 
-- Mobile Resource Index
+- Mobile Resource Index -->
 
 <br>
 
@@ -74,7 +74,7 @@ The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WordsAPI |      yes      | _https://rapidapi.com/dpventures/api/wordsapi?endpoint=54b91641e4b01400ba212d74_ | 
+| WordsAPI |      yes      | _https://rapidapi.com/dpventures/api/wordsapi?endpoint=54b91641e4b01400ba212d74_ | https://wordsapiv1.p.rapidapi.com/words/incredible/syllables 
 
 <br>
 
