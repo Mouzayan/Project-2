@@ -3,8 +3,8 @@
 
 ### Overview
 
-_**Refrigerator Haiku** Refrigerator Haiku is inspired by the popular refrigerator magnet game, rendered in a digital and interactive way. It is an application that serves the user a selection of random words which they can arrange into whimsical sentences.
-After completing one round, the user hits a subscription wall in order to get a fresh selection of words, for creating another poem._
+_**Refrigerator Haiku** is inspired by the popular refrigerator magnet game, rendered here in a digital and interactive way. It is an application that serves the user a selection of random words which they can arrange into  a haiku poem.
+After completing one round, the user hits a subscription wall in order to get a fresh selection of words for creating another poem._
 
 <br>
 
@@ -40,13 +40,11 @@ After completing one round, the user hits a subscription wall in order to get a 
 
 ### MVP
 
-> The Minimum Viable Product should be a well-planned and easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
+_The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 30 verbs, 15 adjectives, 15 adverbs, 5 exclamations or interjections and 5 articles or conjuctions -- to select from in formulating a 3 line haiku. The application accepts 5 syllables for the first and last lines and 7 syllables for the middle line. A counter  at each line tracks how many syllables the user has deployed thus far, preventing them from continuing if they surpasse the allowed number of syllables for that line._
 
 <br>
 
-#### Goals
+<!-- #### Goals
 
 - _Lorem ipsum, dolor sit amet,_
 - _consectetur adipiscing elit._
@@ -58,17 +56,17 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Libraries
 
-> Use this section to list all supporting libraries and their role in the project.
+> Use this section to list all supporting libraries and their role in the project. -->
 
-|     Library      | Description                                |
+<!-- |     Library      | Description                                |
 | :--------------: | :----------------------------------------- |
 |   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
 | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
 |   React Spring   | _Lorem ipsum dolor sit amet, consectetur._ |
 
-<br>
+<br> -->
 
-#### Data
+<!-- #### Data
 
 > Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
 
@@ -76,9 +74,9 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
 | WeatherAPI |      yes      | _example.com_ | _example.com/mickeymouse?s=movies&t=10_ |
 
-<br>
+<br> -->
 
-#### Component Hierarchy
+<!-- #### Component Hierarchy
 
 > Use this section to define your React components and the data architecture of your app.
 
@@ -99,21 +97,21 @@ src
       |__ Footer.jsx
 ```
 
-<br>
+<br> -->
 
-#### Component Breakdown
+<!-- #### Component Breakdown
 
 > Use this section to go into further depth regarding your components, including breaking down the components as stateless or stateful, and considering the passing of data between those components.
 
 |  Component   |    Type    | state | props | Description                                                      |
-| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- | -->
+<!-- |    Header    | functional |   n   |   n   | _The header will contain the navigation and logo._               |
 |  Navigation  | functional |   n   |   n   | _The navigation will provide a link to each of the pages._       |
 |   Gallery    |   class    |   y   |   n   | _The gallery will render the posts using cards in flexbox._      |
 | Gallery Card | functional |   n   |   y   | _The cards will render the post info via props._                 |
 |    Footer    | functional |   n   |   n   | _The footer will show info about me and a link to my portfolio._ |
 
-<br>
+<br> -->
 
 ### Post-MVP
 
@@ -121,7 +119,7 @@ src
 
 <br>
 
-#### Post-MVP Goals
+<!-- #### Post-MVP Goals
 
 - _Add user account and auth capabilities._
 
@@ -133,7 +131,7 @@ src
 
 <br>
 
----
+--- -->
 
 <!-- ### Code Showcase
 
@@ -144,73 +142,3 @@ function reverse(string) {
 	// here is the code to reverse a string of text
 }
 ``` -->
-=======
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
->>>>>>> 81288bd19905c41d87ee6c9155c7cca5536eeb62
