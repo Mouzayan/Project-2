@@ -1,14 +1,6 @@
 
 ![Alt Text](https://media.giphy.com/media/9PyUrkqAQEzXxuaxfo/giphy.gif)
 
-![Alt Text](https://media.giphy.com/media/TIQweO4t9mhaz9w5j1/giphy.gif)
-
-<img src="https://cloud.githubusercontent.com/assets/yourgif.gif" width="400" height="790">
-
-
-
-
-
 # **Refrigerator Haiku**
 
 ### Overview
@@ -76,15 +68,15 @@ The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 
 
 <br> -->
 
-<!-- #### Data
-
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries.
+#### Data
+<!-- 
+> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries. -->
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WeatherAPI |      yes      | _example.com_ | _example.com/mickeymouse?s=movies&t=10_ |
+| WordsAPI |      yes      | _https://rapidapi.com/dpventures/api/wordsapi?endpoint=54b91641e4b01400ba212d74_ | 
 
-<br> -->
+<br>
 
 <!-- #### Component Hierarchy
 
