@@ -74,7 +74,7 @@ The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
-| WordsAPI |      yes      | _https://rapidapi.com/dpventures/api/wordsapi?endpoint=54b91641e4b01400ba212d74_ | https://wordsapiv1.p.rapidapi.com/words/incredible/syllables 
+| WordsAPI |      yes      | _https://rapidapi.com/dpventures/api/wordsapi?endpoint=54b91641e4b01400ba212d74_ | https://wordsapiv1.p.rapidapi.com/words/incredible/syllables |
 
 <br>
 
