@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from "react";
 // import { Route } from "react-router-dom";
 import axios from "axios";
@@ -38,6 +39,31 @@ class App extends Component {
       </>
     );
   }
+=======
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+>>>>>>> 81288bd19905c41d87ee6c9155c7cca5536eeb62
 }
 
 export default App;
