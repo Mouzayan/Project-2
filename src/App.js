@@ -8,16 +8,17 @@ class App extends Component {
     super();
 
     this.state = {
-      results: []
+      results: [],
+      input: ""
     };
   }
 
   componentDidMount = async () => {
-    const input = "sun";
+    const input = "hourglass";
 
     const response = await axios({
       method: "GET",
-      url: `https://wordsapiv1.p.rapidapi.com/words/${input}/definitions`,
+      url: `https://wordsapiv1.p.rapidapi.com/words/${input}/syllables`,
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
