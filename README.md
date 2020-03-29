@@ -114,14 +114,14 @@ src
 <br> -->
 
 ### Post-MVP
-
+<!-- 
 > Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
 
 <br>
 
-#### Post-MVP Goals
+#### Post-MVP Goals -->
 
-- The user will be required to "Sign Up" by submitting their email address to save their poem as well as to play more than one round.
+The user will be required to "Sign Up" by submitting their email address to save their poem as well as to play more than one round.
 
 <br>
 
