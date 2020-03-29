@@ -68,7 +68,7 @@ The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 
 
 <br> -->
 
-#### Data
+### Data
 <!-- 
 > Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries. -->
 
