@@ -1,4 +1,12 @@
 
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+
+![Alt Text](https://media.giphy.com/media/TIQweO4t9mhaz9w5j1/giphy.gif)
+
+
+
+
+
 # **Refrigerator Haiku**
 
 ### Overview
@@ -40,7 +48,7 @@ After completing one round, the user hits a subscription wall in order to get a 
 
 ### MVP
 
-_The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 30 verbs, 15 adjectives, 15 adverbs, 5 exclamations or interjections and 5 articles or conjuctions -- to select from in formulating a 3 line haiku. The application accepts 5 syllables for the first and last lines and 7 syllables for the middle line. A counter  at each line tracks how many syllables the user has deployed thus far, preventing them from continuing if they surpasse the allowed number of syllables for that line. A "delete word" button allows the user to delete the last word they added to their poem._
+The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 30 verbs, 15 adjectives, 15 adverbs, 5 exclamations or interjections and 5 articles or conjuctions -- to select from in formulating a 3 line haiku. The application accepts 5 syllables for the first and last lines and 7 syllables for the middle line. A counter  at each line tracks how many syllables the user has deployed thus far, preventing them from continuing if they surpasse the allowed number of syllables for that line. A "delete word" button allows the user to delete the last word they added to their poem.
 
 <br>
 
@@ -121,7 +129,7 @@ src
 
 #### Post-MVP Goals -->
 
-The user will be required to "Sign Up" by submitting their email address to save their poem as well as to play more than one round.
+The user will be required to "Sign Up" by submitting their email address, in order to save their haiku, as well as to create additional compositions.
 
 <br>
 
