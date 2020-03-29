@@ -42,7 +42,7 @@ After completing one round, the user hits a subscription wall in order to get a 
 
 ### MVP
 
-The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 30 verbs, 15 adjectives, 15 adverbs, 5 exclamations or interjections and 5 articles or conjuctions -- to select from in formulating a 3 line haiku. The application accepts 5 syllables for the first and last lines and 7 syllables for the middle line. A counter  at each line tracks how many syllables the user has deployed thus far, preventing them from continuing if they surpasse the allowed number of syllables for that line. A "delete word" button allows the user to delete the last word they added to their poem.
+The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 30 verbs, 15 adjectives, 15 adverbs, 5 exclamations or interjections and 5 articles or conjuctions -- to select from in formulating a 3 line haiku. The application accepts 5 syllables for the first and last lines and 7 syllables for the middle line. A counter  at each line tracks how many syllables the user has deployed thus far, preventing them from continuing if they surpasse the allowed number of syllables for that line. An "Undo" button will allow the user to delete the last word they included in their composition.
 
 <br>
 
