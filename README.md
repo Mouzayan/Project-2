@@ -20,8 +20,9 @@ Desktop view
 ![Dummy Link](url)
 Tablet view
 
-![](https://imgur.com/a/0IRR3CV))
+[Homepage ](https://imgur.com/nTOzdM2)
 Mobile view
+
 
 <!-- 
 ![Dummy Link](url)
