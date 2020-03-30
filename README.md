@@ -14,15 +14,11 @@ After completing one round, the user hits a subscription wall in order to get a 
 <!-- 
 > Use the Wireframes section to display desktop, tablet and mobile views. -->
 
-![Dummy Link](url)
-Desktop view 
+Desktop ![Dummy Link](url) 
 
-![Dummy Link](url)
-Tablet view
+Tablet  ![Dummy Link](url)
 
-[Homepage ](https://imgur.com/nTOzdM2)
-Mobile view
-
+Mobile  [Homepage ](https://imgur.com/nTOzdM2)
 
 <!-- 
 ![Dummy Link](url)
