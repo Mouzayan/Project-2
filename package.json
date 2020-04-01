@@ -36,6 +36,7 @@
     ]
   },
   "devDependencies": {
-    "@storybook/react": "^5.3.17"
+    "@storybook/react": "^5.3.17",
+    "babel-eslint": "^10.1.0"
   }
 }

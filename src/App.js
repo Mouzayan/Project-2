@@ -4,7 +4,9 @@ import axios from "axios";
 import "./App.css";
 import Header from "./Components/Header";
 import Words from "./Components/Words";
-import DragAndDrop from "./Components/DragAndDrop";
+import HaikuForm from "./Components/HaikuForm/HaikuForm";
+
+// import DragAndDrop from "./Components/DragAndDrop";
 
 class App extends Component {
   constructor() {
@@ -16,7 +18,19 @@ class App extends Component {
       resultAdjectives: [],
       resultAdverbs: [],
       resultConjunctions: [],
-      resultsInterjection: []
+      resultsInterjection: [],
+      lineOne: {
+        wordCount: 0,
+        wordArray: []
+      },
+      lineTwo: {
+        wordCount: 0,
+        wordArray: []
+      },
+      lineThree: {
+        wordCount: 0,
+        wordArray: []
+      }
     };
   }
 
@@ -36,7 +50,7 @@ class App extends Component {
           hasDetails: "syllables"
         }
       });
-      console.log(responseVerb);
+      // console.log(responseVerb);
 
       if (responseVerb.data.syllables) {
         const { word, syllables } = responseVerb.data;
@@ -66,7 +80,7 @@ class App extends Component {
           hasDetails: "syllables"
         }
       });
-      console.log(responseNoun);
+      // console.log(responseNoun);
 
       if (responseNoun.data.syllables) {
         const { word, syllables } = responseNoun.data;
@@ -96,7 +110,7 @@ class App extends Component {
           hasDetails: "syllables"
         }
       });
-      console.log(responseAdverb);
+      // console.log(responseAdverb);
 
       if (responseAdverb.data.syllables) {
         const { word, syllables } = responseAdverb.data;
@@ -126,7 +140,7 @@ class App extends Component {
           hasDetails: "syllables"
         }
       });
-      console.log(responseAdjective);
+      // console.log(responseAdjective);
 
       if (responseAdjective.data.syllables) {
         const { word, syllables } = responseAdjective.data;
@@ -156,7 +170,7 @@ class App extends Component {
           hasDetails: "syllables"
         }
       });
-      console.log(responseConjunctions);
+      // console.log(responseConjunctions);
 
       if (responseConjunctions.data.syllables) {
         const { word, syllables } = responseConjunctions.data;
@@ -172,38 +186,87 @@ class App extends Component {
     }
   };
 
+  handleWordInput = item => {
+    console.log(item);
+
+    if (this.state.lineTwo.wordCount > 7) {
+      this.setState({
+        lineThree: {
+          wordArray: [...this.state.lineThree.wordArray, item.word],
+          wordCount: (this.state.lineThree.wordCount += item.count)
+        }
+      });
+    } else if (this.state.lineOne.wordCount > 5) {
+      this.setState({
+        lineTwo: {
+          wordArray: [...this.state.lineTwo.wordArray, item.word],
+          wordCount: (this.state.lineTwo.wordCount += item.count)
+        }
+      });
+    } else if (this.state.lineThree.wordCount > 5) {
+      alert("not working");
+    } else {
+      this.setState({
+        lineOne: {
+          wordArray: [...this.state.lineOne.wordArray, item.word],
+          wordCount: (this.state.lineOne.wordCount += item.count)
+        }
+      });
+    }
+  };
+
+  // reducer = (state, action) => {
+  //   switch (action.type) {
+  //     case "SET_DROP_DEPTH":
+  //       return { ...state, dropDepth: action.dropDepth };
+  //     case "SET_IN_DROP_ZONE":
+  //       return { ...state, inDropZone: action.inDropZone };
+  //     case "ADD_FILE_TO_LIST":
+  //       return { ...state, fileList: state.fileList.concat(action.files) };
+  //     default:
+  //       return state;
+  //   }
+  // };
+
+  // let [data, dispatch] = React.useReducer(this.reducer, { dropDepth: 0, inDropZone: false, fileList: []}
+  //   )
+
   render() {
     return (
       <>
-        <div className="App"></div>
-        <header>
-          <Header />
-        </header>
+        <div className="App">
+          <header>
+            <Header />
+          </header>
 
-        <main>
-          <DragAndDrop />
+          <main>
+            <HaikuForm wordChoice={this.state.lineOne.wordArray} />
+            <HaikuForm wordChoice={this.state.lineTwo} />
+            <HaikuForm wordChoice={this.state.lineThree} />
 
-          <p>drag and drop a word to begin composing your haiku</p>
+            {/* <div>
+            <DragAndDrop data={data} dispatch={dispatch} />
 
-          <Route
-            exact
-            path="/"
-            render={routerProps => (
-              <Words
-                wordListVerb={this.state.resultVerbs}
-                {...routerProps}
-                wordListNoun={this.state.resultNouns}
-                {...routerProps}
-                wordListAdverb={this.state.resultAdverbs}
-                {...routerProps}
-                wordListAdjective={this.state.resultAdjectives}
-                {...routerProps}
-                wordListConjunction={this.state.resultConjunctions}
-                {...routerProps}
-              />
-            )}
-          />
-        </main>
+            <ol className="dropped-files">
+              {data.fileList.map(f => {
+                return (<li key={f.name}>{f.name}</li>
+                )
+              })}
+            </ol>
+          </div> */}
+
+            <p>click a word to begin composing your haiku</p>
+
+            <Words
+              wordListVerb={this.state.resultVerbs}
+              wordListNoun={this.state.resultNouns}
+              wordListAdverb={this.state.resultAdverbs}
+              wordListAdjective={this.state.resultAdjectives}
+              wordListConjunction={this.state.resultConjunctions}
+              handleWordInput={this.handleWordInput}
+            />
+          </main>
+        </div>
       </>
     );
   }
