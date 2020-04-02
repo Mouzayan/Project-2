@@ -3,10 +3,11 @@ import { Route } from "react-router-dom";
 import axios from "axios";
 import "./App.css";
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 import Words from "./Components/Words";
+import UndoButton from "./Components/UndoButton";
 import HaikuForm from "./Components/HaikuForm/HaikuForm";
-
-// import DragAndDrop from "./Components/DragAndDrop";
+import About from "./Components/About";
 
 class App extends Component {
   constructor() {
@@ -18,17 +19,17 @@ class App extends Component {
       resultAdjectives: [],
       resultAdverbs: [],
       resultConjunctions: [],
-      resultsInterjection: [],
+
       lineOne: {
-        wordCount: 0,
+        syllableCount: 0,
         wordArray: []
       },
       lineTwo: {
-        wordCount: 0,
+        syllableCount: 0,
         wordArray: []
       },
       lineThree: {
-        wordCount: 0,
+        syllableCount: 0,
         wordArray: []
       }
     };
@@ -52,16 +53,21 @@ class App extends Component {
       });
       // console.log(responseVerb);
 
-      if (responseVerb.data.syllables) {
+      if (
+        responseVerb.data.syllables &&
+        responseVerb.data.syllables.count < 4
+      ) {
         const { word, syllables } = responseVerb.data;
-        this.setState({
-          resultsVerb: this.state.resultVerbs.push({
-            word: word,
-            count: syllables.count
-          })
-        });
-      } else {
-        i--;
+        if (responseVerb.data.syllables) {
+          this.setState({
+            resultsVerb: this.state.resultVerbs.push({
+              word: word,
+              count: syllables.count
+            })
+          });
+        } else {
+          i -= 1;
+        }
       }
     }
 
@@ -156,80 +162,85 @@ class App extends Component {
     }
 
     for (let i = 0; i < 5; i += 1) {
-      const responseConjunctions = await axios({
-        method: "GET",
-        url: `https://wordsapiv1.p.rapidapi.com/words/`,
-        headers: {
-          "content-type": "application/octet-stream",
-          "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-          "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
-        },
-        params: {
-          random: "true",
-          partOfSpeech: "article",
-          hasDetails: "syllables"
-        }
+      this.setState({
+        resultConjunctions: [
+          { word: "he", syllable: 1 },
+          { word: "she", syllable: 1 },
+          { word: "they", syllable: 1 },
+          { word: "it", syllable: 1 },
+          { word: "you", syllable: 1 },
+          { word: "us", syllable: 1 },
+          { word: "we", syllable: 1 },
+          { word: "I", syllable: 1 },
+          { word: "am", syllable: 1 },
+          { word: "but", syllable: 1 },
+          { word: "and", syllable: 1 },
+          { word: "if", syllable: 1 },
+          { word: "the", syllable: 1 },
+          { word: "nor", syllable: 1 },
+          { word: "then", syllable: 1 },
+          { word: "or", syllable: 1 },
+          { word: "no", syllable: 1 },
+          { word: "not", syllable: 1 },
+          { word: "none", syllable: 1 },
+          { word: "neither", syllable: 2 },
+          { word: "oops", syllable: 1 },
+          { word: "yikes", syllable: 1 },
+          { word: "either", syllable: 2 }
+        ]
       });
-      // console.log(responseConjunctions);
 
-      if (responseConjunctions.data.syllables) {
-        const { word, syllables } = responseConjunctions.data;
-        this.setState({
-          resultsArticle: this.state.resultConjunctions.push({
-            word: word,
-            count: syllables.count
-          })
-        });
-      } else {
-        i--;
-      }
+      // if (resultConjunctions.data.syllables) {
+      //   const { word, syllables } = resultConjunctions.data;
+      // this.setState({
+      //   resultsArticle: this.state.resultConjunctions.push({
+      //     word: word,
+      //     count: syllables.count
+      //   })
+      // });
+      // } else {
+      //   i--;
+      // }
     }
   };
 
   handleWordInput = item => {
     console.log(item);
 
-    if (this.state.lineTwo.wordCount > 7) {
+    if (
+      this.state.lineThree.syllableCount + item.count > 5 &&
+      this.state.lineThree.syllableCount === 5
+    ) {
+      alert("you have maxed out on choosing words!");
+    } else if (
+      // this.state.lineTwo.syllableCount + item.count < 7 &&
+      this.state.lineTwo.syllableCount === 7
+    ) {
       this.setState({
         lineThree: {
           wordArray: [...this.state.lineThree.wordArray, item.word],
-          wordCount: (this.state.lineThree.wordCount += item.count)
+          syllableCount: (this.state.lineThree.syllableCount += item.count)
         }
       });
-    } else if (this.state.lineOne.wordCount > 5) {
+    } else if (
+      // this.state.lineOne.syllableCount + item.count < 5 &&
+      this.state.lineOne.syllableCount === 5
+    ) {
       this.setState({
         lineTwo: {
           wordArray: [...this.state.lineTwo.wordArray, item.word],
-          wordCount: (this.state.lineTwo.wordCount += item.count)
+          syllableCount: (this.state.lineTwo.syllableCount += item.count)
         }
       });
-    } else if (this.state.lineThree.wordCount > 5) {
-      alert("not working");
-    } else {
+    } else if (this.state.lineOne.syllableCount + item.count < 6) {
       this.setState({
         lineOne: {
           wordArray: [...this.state.lineOne.wordArray, item.word],
-          wordCount: (this.state.lineOne.wordCount += item.count)
+          syllableCount: (this.state.lineOne.syllableCount += item.count)
         }
       });
     }
   };
-
-  // reducer = (state, action) => {
-  //   switch (action.type) {
-  //     case "SET_DROP_DEPTH":
-  //       return { ...state, dropDepth: action.dropDepth };
-  //     case "SET_IN_DROP_ZONE":
-  //       return { ...state, inDropZone: action.inDropZone };
-  //     case "ADD_FILE_TO_LIST":
-  //       return { ...state, fileList: state.fileList.concat(action.files) };
-  //     default:
-  //       return state;
-  //   }
-  // };
-
-  // let [data, dispatch] = React.useReducer(this.reducer, { dropDepth: 0, inDropZone: false, fileList: []}
-  //   )
 
   render() {
     return (
@@ -237,25 +248,29 @@ class App extends Component {
         <div className="App">
           <header>
             <Header />
+            <Route exact path="/about" component={About} />
           </header>
 
           <main>
-            <HaikuForm wordChoice={this.state.lineOne.wordArray} />
-            <HaikuForm wordChoice={this.state.lineTwo} />
-            <HaikuForm wordChoice={this.state.lineThree} />
+            <HaikuForm
+              wordChoice={this.state.lineOne.wordArray}
+              line={"firstLine"}
+              placeholder={"5 syllables remaining"}
+            />
+            <HaikuForm
+              wordChoice={this.state.lineTwo.wordArray}
+              line={"secondLine"}
+              placeholder={"7 syllables remaining"}
+            />
+            <HaikuForm
+              wordChoice={this.state.lineThree.wordArray}
+              line={"thirdLine"}
+              placeholder={"5 syllables remaining"}
+            />
 
-            {/* <div>
-            <DragAndDrop data={data} dispatch={dispatch} />
+            <UndoButton />
 
-            <ol className="dropped-files">
-              {data.fileList.map(f => {
-                return (<li key={f.name}>{f.name}</li>
-                )
-              })}
-            </ol>
-          </div> */}
-
-            <p>click a word to begin composing your haiku</p>
+            <p className="prompt">click a word to begin composing your haiku</p>
 
             <Words
               wordListVerb={this.state.resultVerbs}
@@ -267,6 +282,9 @@ class App extends Component {
             />
           </main>
         </div>
+        <footer>
+          <Footer />
+        </footer>
       </>
     );
   }

@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.headerDiv {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-bottom: 3em;
+}
+
+.logo {
+  padding-left: 2em;
+  font-style: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-size: 2.5 em;
+  text-decoration: none;
+  color: black;
+}
+
+.logIn {
+  padding-right: 2em;
+  font-style: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 2.5 em;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+nav.pointer {
+  cursor: pointer;
+}
+
+nav:hover {
+  background-color: none;
+}

@@ -1,0 +1,38 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.servedWords {
+  list-style: none;
+  border: none;
+  padding: 0;
+  display: flex;
+  background-color: #F2F2F2;
+}
+
+.servedWord {
+  border: 0.5px solid black;
+  border-radius: 1px;
+  padding: 0.5em;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 1em;
+  background-color: white;
+  margin:0.5em;
+  box-shadow: 3px 3px 0px #181818;
+}
+
+.thirdLine {
+  width:40%;
+}
+
+.firstLine {
+  width:40%;
+}
+
+.secondLine {
+  width:60%;
+}
+
+

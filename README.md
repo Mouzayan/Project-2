@@ -23,18 +23,6 @@ Tablet
 Mobile Homepage 
 ![](https://i.imgur.com/nTOzdM2.png)
 
-<!-- 
-![Dummy Link](url)
-
-- Desktop Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index -->
 
 <br>
 
@@ -44,31 +32,13 @@ The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 
 
 <br>
 
-<!-- #### Goals
-
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
-
-<br>
-
-#### Libraries
-
-> Use this section to list all supporting libraries and their role in the project. -->
-
-<!-- |     Library      | Description                                |
-| :--------------: | :----------------------------------------- |
-|   React Router   | _Lorem ipsum dolor sit amet, consectetur._ |
+dolor sit amet, consectetur._ |
 | React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._ |
 |   React Spring   | _Lorem ipsum dolor sit amet, consectetur._ |
 
 <br> -->
 
 ### Data
-<!-- 
-> Use the Data Section to define the API(s) you will be consuming for your project, inluding sample URL queries. -->
 
 |    API     | Quality Docs? | Website       | Sample Query                            |
 | :--------: | :-----------: | :------------ | :-------------------------------------- |
@@ -76,26 +46,7 @@ The **Refrigerator Haiku** MVP offers the user a list of 100 words -- 30 nouns, 
 
 <br>
 
-<!-- #### Component Hierarchy
 
-> Use this section to define your React components and the data architecture of your app.
-
-```
-src
-|__ assets/
-      |__ data-tests
-      |__ fonts
-      |__ graphics
-      |__ images
-      |__ mockups
-|__ components/
-      |__ Header.jsx
-      |__ Hero.jsx
-      |__ Ipsum.jsx
-      |__ Lorem.jsx
-      |__ CTA.jsx
-      |__ Footer.jsx
-```
 
 <br> -->
 
