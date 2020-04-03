@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  margin-left: 2em;
+  max-width: 40%;
+  display: block;
+  text-align: left;
+}
+
+.text {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+  font-family: "IBM Plex Mono", monospace;
+  text-justify: inter-word;
+}
+
+.callToAction {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+/* IPAD 1, 2, MINI & AIR */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .about {
+    max-width: 50%;
+    text-align: left;
+  }
+}
+
+/* IPHONE X */
+@media only screen and (min-width: 375px) and (max-width: 810px) {
+  .about {
+    max-width: 70%;
+    text-align: left;
+  } 
+}

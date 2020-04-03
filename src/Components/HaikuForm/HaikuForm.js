@@ -1,5 +1,6 @@
 import React from "react";
-import "./HaikuForms.css";
+import "./HaikuForm.css";
+
 
 const HaikuForm = props => {
   let wordSelection;

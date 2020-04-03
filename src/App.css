@@ -3,30 +3,70 @@
 /* font-family: 'IBM Plex Mono', monospace;
 font-family: 'IBM Plex Sans', sans-serif; */
 
-/* <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet"> */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
 
 .App {
   margin: 0;
   text-align: center;
   font-family: "IBM Plex Mono", monospace;
   background-color: #f2f2f2;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 91vh;
+}
+
+main {
+  /* height: 100%; */
+  width: 100%;
 }
 
 .prompt {
   padding: 2.5em;
+  display: block;
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
+  font-size: 1.1em;
+}
+
+.wordsDiv {
+  display: block;
+  text-align: center;
+  margin: auto;
+  max-width: 80%;
 }
 
 /* IPHONE X */
-/* @media only screen and (min-width: 375px) and (max-width: 810px) {
+@media only screen and (min-width: 375px) and (max-width: 810px) {
+  html {
+    font-size: 14px;
+  }
 }
-body {
-    background-color: #fff;
-} */
+
 /* IPAD 1, 2, MINI & AIR */
-/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
-.CONTACTDETAILS {
-    margin-left: 0;
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+  .thirdLine {
+    max-width: 60%;
+  }
+
+  .firstLine {
+    max-width: 60%;
+  }
+
+  .secondLine {
+    max-width: 70%;
+  }
 }
-body {
-    background-color: #ff0000;
-} */

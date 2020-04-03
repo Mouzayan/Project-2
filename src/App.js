@@ -8,6 +8,7 @@ import Words from "./Components/Words";
 import UndoButton from "./Components/UndoButton";
 import HaikuForm from "./Components/HaikuForm/HaikuForm";
 import About from "./Components/About";
+import UndoArrow from "./Images/arrow-undo.jpg";
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class App extends Component {
       resultAdjectives: [],
       resultAdverbs: [],
       resultConjunctions: [],
+      conjLoop: [],
 
       lineOne: {
         syllableCount: 0,
@@ -36,7 +38,7 @@ class App extends Component {
   }
 
   componentDidMount = async () => {
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 9; i += 1) {
       const responseVerb = await axios({
         method: "GET",
         url: `https://wordsapiv1.p.rapidapi.com/words/`,
@@ -71,7 +73,7 @@ class App extends Component {
       }
     }
 
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 10; i += 1) {
       const responseNoun = await axios({
         method: "GET",
         url: `https://wordsapiv1.p.rapidapi.com/words/`,
@@ -88,20 +90,25 @@ class App extends Component {
       });
       // console.log(responseNoun);
 
-      if (responseNoun.data.syllables) {
-        const { word, syllables } = responseNoun.data;
-        this.setState({
-          resultsNoun: this.state.resultNouns.push({
-            word: word,
-            count: syllables.count
-          })
-        });
-      } else {
-        i--;
+      if (
+        responseNoun.data.syllables &&
+        responseNoun.data.syllables.count < 4
+      ) {
+        if (responseNoun.data.syllables) {
+          const { word, syllables } = responseNoun.data;
+          this.setState({
+            resultsNoun: this.state.resultNouns.push({
+              word: word,
+              count: syllables.count
+            })
+          });
+        } else {
+          i--;
+        }
       }
     }
 
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 10; i += 1) {
       const responseAdverb = await axios({
         method: "GET",
         url: `https://wordsapiv1.p.rapidapi.com/words/`,
@@ -118,20 +125,25 @@ class App extends Component {
       });
       // console.log(responseAdverb);
 
-      if (responseAdverb.data.syllables) {
-        const { word, syllables } = responseAdverb.data;
-        this.setState({
-          resultsAdverb: this.state.resultAdverbs.push({
-            word: word,
-            count: syllables.count
-          })
-        });
-      } else {
-        i--;
+      if (
+        responseAdverb.data.syllables &&
+        responseAdverb.data.syllables.count < 4
+      ) {
+        if (responseAdverb.data.syllables) {
+          const { word, syllables } = responseAdverb.data;
+          this.setState({
+            resultsAdverb: this.state.resultAdverbs.push({
+              word: word,
+              count: syllables.count
+            })
+          });
+        } else {
+          i--;
+        }
       }
     }
 
-    for (let i = 0; i < 5; i += 1) {
+    for (let i = 0; i < 10; i += 1) {
       const responseAdjective = await axios({
         method: "GET",
         url: `https://wordsapiv1.p.rapidapi.com/words/`,
@@ -148,60 +160,60 @@ class App extends Component {
       });
       // console.log(responseAdjective);
 
-      if (responseAdjective.data.syllables) {
-        const { word, syllables } = responseAdjective.data;
-        this.setState({
-          resultsAdjective: this.state.resultAdjectives.push({
-            word: word,
-            count: syllables.count
-          })
-        });
-      } else {
-        i--;
+      if (
+        responseAdjective.data.syllables &&
+        responseAdjective.data.syllables.count < 4
+      ) {
+        if (responseAdjective.data.syllables) {
+          const { word, syllables } = responseAdjective.data;
+          this.setState({
+            resultsAdjective: this.state.resultAdjectives.push({
+              word: word,
+              count: syllables.count
+            })
+          });
+        } else {
+          i--;
+        }
       }
     }
 
+    this.setState({
+      conjLoop: [
+        { word: "he", syllable: 1 },
+        { word: "she", syllable: 1 },
+        { word: "they", syllable: 1 },
+        { word: "it", syllable: 1 },
+        { word: "you", syllable: 1 },
+        { word: "us", syllable: 1 },
+        { word: "we", syllable: 1 },
+        { word: "I", syllable: 1 },
+        { word: "am", syllable: 1 },
+        { word: "but", syllable: 1 },
+        { word: "and", syllable: 1 },
+        { word: "if", syllable: 1 },
+        { word: "the", syllable: 1 },
+        { word: "nor", syllable: 1 },
+        { word: "then", syllable: 1 },
+        { word: "or", syllable: 1 },
+        { word: "no", syllable: 1 },
+        { word: "not", syllable: 1 },
+        { word: "none", syllable: 1 },
+        { word: "neither", syllable: 2 },
+        { word: "oops", syllable: 1 },
+        { word: "yikes", syllable: 1 },
+        { word: "either", syllable: 2 }
+      ]
+    });
+    let testArray = [];
     for (let i = 0; i < 5; i += 1) {
-      this.setState({
-        resultConjunctions: [
-          { word: "he", syllable: 1 },
-          { word: "she", syllable: 1 },
-          { word: "they", syllable: 1 },
-          { word: "it", syllable: 1 },
-          { word: "you", syllable: 1 },
-          { word: "us", syllable: 1 },
-          { word: "we", syllable: 1 },
-          { word: "I", syllable: 1 },
-          { word: "am", syllable: 1 },
-          { word: "but", syllable: 1 },
-          { word: "and", syllable: 1 },
-          { word: "if", syllable: 1 },
-          { word: "the", syllable: 1 },
-          { word: "nor", syllable: 1 },
-          { word: "then", syllable: 1 },
-          { word: "or", syllable: 1 },
-          { word: "no", syllable: 1 },
-          { word: "not", syllable: 1 },
-          { word: "none", syllable: 1 },
-          { word: "neither", syllable: 2 },
-          { word: "oops", syllable: 1 },
-          { word: "yikes", syllable: 1 },
-          { word: "either", syllable: 2 }
+      testArray.push(
+        this.state.conjLoop[
+          Math.floor(Math.random() * this.state.conjLoop.length)
         ]
-      });
-
-      // if (resultConjunctions.data.syllables) {
-      //   const { word, syllables } = resultConjunctions.data;
-      // this.setState({
-      //   resultsArticle: this.state.resultConjunctions.push({
-      //     word: word,
-      //     count: syllables.count
-      //   })
-      // });
-      // } else {
-      //   i--;
-      // }
+      );
     }
+    this.setState({ resultConjunctions: testArray });
   };
 
   handleWordInput = item => {
@@ -252,34 +264,42 @@ class App extends Component {
           </header>
 
           <main>
-            <HaikuForm
-              wordChoice={this.state.lineOne.wordArray}
-              line={"firstLine"}
-              placeholder={"5 syllables remaining"}
-            />
-            <HaikuForm
-              wordChoice={this.state.lineTwo.wordArray}
-              line={"secondLine"}
-              placeholder={"7 syllables remaining"}
-            />
-            <HaikuForm
-              wordChoice={this.state.lineThree.wordArray}
-              line={"thirdLine"}
-              placeholder={"5 syllables remaining"}
-            />
+            <div className="haikuDiv">
+              <HaikuForm
+                wordChoice={this.state.lineOne.wordArray}
+                line={"firstLine"}
+                placeholder={"5 syllables remaining"}
+              />
+              <HaikuForm
+                wordChoice={this.state.lineTwo.wordArray}
+                line={"secondLine"}
+                placeholder={"7 syllables remaining"}
+              />
+              <HaikuForm
+                wordChoice={this.state.lineThree.wordArray}
+                line={"thirdLine"}
+                placeholder={"5 syllables remaining"}
+              />
+            </div>
 
-            <UndoButton />
+            <div className="undo">
+              <UndoButton UndoArrow={UndoArrow} />
+            </div>
 
             <p className="prompt">click a word to begin composing your haiku</p>
 
-            <Words
-              wordListVerb={this.state.resultVerbs}
-              wordListNoun={this.state.resultNouns}
-              wordListAdverb={this.state.resultAdverbs}
-              wordListAdjective={this.state.resultAdjectives}
-              wordListConjunction={this.state.resultConjunctions}
-              handleWordInput={this.handleWordInput}
-            />
+            <div className="wordsWrapper">
+              <div className="wordsDiv">
+                <Words
+                  wordListVerb={this.state.resultVerbs}
+                  wordListNoun={this.state.resultNouns}
+                  wordListAdverb={this.state.resultAdverbs}
+                  wordListAdjective={this.state.resultAdjectives}
+                  wordListConjunction={this.state.resultConjunctions}
+                  handleWordInput={this.handleWordInput}
+                />
+              </div>
+            </div>
           </main>
         </div>
         <footer>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +15,7 @@
   align-items: center;
   padding-top: 1em;
   padding-bottom: 1em;
-  margin-bottom: 3em;
+  margin-bottom: 1em;
 }
 
 .logo {
@@ -41,4 +43,8 @@ nav.pointer {
 
 nav:hover {
   background-color: none;
+}
+
+nav {
+  font-family: "IBM Plex Mono", monospace;
 }

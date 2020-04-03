@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.haikuLines {
+  border-radius: 4px;
+  padding: 0.2em 1em;
+  font-size: 1em;
+  height: 1.5em;
+  border: 0.5px solid black;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  color: #000;
+  text-align: center;
+  font-family: "IBM Plex Mono", monospace;
+  background-color: white;
+  margin-top: 1em;
+}
+
+.haikuDiv {
+  margin-left: 2em;
+  max-width: 50%;
+  display: block;
+  text-align: center;
+}
+
+::placeholder {
+  margin-left: 1em;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+.thirdLine {
+  max-width: 60%;
+}
+
+.firstLine {
+  max-width: 60%;
+}
+
+.secondLine {
+  max-width: 75%;
+}
+
+/* IPHONE X */
+@media only screen and (min-width: 375px) and (max-width: 810px) {
+  .haikuLines {
+    width: 100%;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .thirdLine {
+    max-width: 90%;
+  }
+
+  .firstLine {
+    max-width: 90%;
+  }
+
+  .secondLine {
+    max-width: 100%;
+  }
+}

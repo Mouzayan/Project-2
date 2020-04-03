@@ -1,6 +1,12 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wordsWrapper {
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 .servedWords {
@@ -8,7 +14,10 @@
   border: none;
   padding: 0;
   display: flex;
-  background-color: #F2F2F2;
+  background-color: #f2f2f2;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: space-between;
 }
 
 .servedWord {
@@ -19,20 +28,25 @@
   font-weight: 600;
   font-size: 1em;
   background-color: white;
-  margin:0.5em;
+  margin: 0.5em;
   box-shadow: 3px 3px 0px #181818;
 }
 
-.thirdLine {
-  width:40%;
+/* IPHONE X */
+@media only screen and (min-width: 375px) and (max-width: 810px) {
+  .wordsWrapper {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+  }
+
+  .servedWords {
+    display: flex;
+    max-width: 100%;
+    margin-left: 2em;
+    margin-right: 2em;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
-
-.firstLine {
-  width:40%;
-}
-
-.secondLine {
-  width:60%;
-}
-
-

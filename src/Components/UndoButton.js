@@ -1,15 +1,22 @@
 import React from "react";
 import "./UndoButton.css";
-import "../Images/arrow-undo.jpg";
 
-function UndoButton() {
-  return (
-    <div className="undoButton">
-      <img src="/Images/arrow-undo.jpg" />
-    </div>
-  );
-}
+
+
+
+const UndoButton = props => (
+  <div className='undo'>
+    <img className='undoImage' src={props.UndoArrow} />
+  </div>
+);
 
 export default UndoButton;
 
 
+
+// const UndoButton = (props) => (
+//   <button className={props.type}>
+//     {props.label}
+//   </button>
+// )
+// export default UndoButton; 
