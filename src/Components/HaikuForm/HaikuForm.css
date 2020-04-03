@@ -53,14 +53,26 @@
   }
 
   .thirdLine {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .firstLine {
-    max-width: 90%;
+    max-width: 80%;
   }
 
   .secondLine {
-    max-width: 100%;
+    min-width: 100%;
+  }
+  .haikuDiv {
+    max-width: 65%;
+  }
+
+  .haikuLines {
+    padding: 0.2em 0.5em;
+    height: 1.5em;
+    width: 70%;
+  }
+  ::placeholder {
+    margin: auto;
   }
 }
