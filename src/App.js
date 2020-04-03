@@ -180,29 +180,29 @@ class App extends Component {
 
     this.setState({
       conjLoop: [
-        { word: "he", syllable: 1 },
-        { word: "she", syllable: 1 },
-        { word: "they", syllable: 1 },
-        { word: "it", syllable: 1 },
-        { word: "you", syllable: 1 },
-        { word: "us", syllable: 1 },
-        { word: "we", syllable: 1 },
-        { word: "I", syllable: 1 },
-        { word: "am", syllable: 1 },
-        { word: "but", syllable: 1 },
-        { word: "and", syllable: 1 },
-        { word: "if", syllable: 1 },
-        { word: "the", syllable: 1 },
-        { word: "nor", syllable: 1 },
-        { word: "then", syllable: 1 },
-        { word: "or", syllable: 1 },
-        { word: "no", syllable: 1 },
-        { word: "not", syllable: 1 },
-        { word: "none", syllable: 1 },
-        { word: "neither", syllable: 2 },
-        { word: "oops", syllable: 1 },
-        { word: "yikes", syllable: 1 },
-        { word: "either", syllable: 2 }
+        { word: "he", count: 1 },
+        { word: "she", count: 1 },
+        { word: "they", count: 1 },
+        { word: "it", count: 1 },
+        { word: "you", count: 1 },
+        { word: "us", count: 1 },
+        { word: "we", count: 1 },
+        { word: "I", count: 1 },
+        { word: "am", count: 1 },
+        { word: "but", count: 1 },
+        { word: "and", count: 1 },
+        { word: "if", count: 1 },
+        { word: "the", count: 1 },
+        { word: "nor", count: 1 },
+        { word: "then", count: 1 },
+        { word: "or", count: 1 },
+        { word: "no", count: 1 },
+        { word: "not", count: 1 },
+        { word: "none", count: 1 },
+        { word: "neither", count: 2 },
+        { word: "oops", count: 1 },
+        { word: "yikes", count: 1 },
+        { word: "either", count: 2 }
       ]
     });
     let testArray = [];
@@ -217,8 +217,6 @@ class App extends Component {
   };
 
   handleWordInput = item => {
-    console.log(item);
-
     if (
       this.state.lineThree.syllableCount + item.count > 5 &&
       this.state.lineThree.syllableCount === 5

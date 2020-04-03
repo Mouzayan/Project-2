@@ -20,6 +20,16 @@
   align-content: space-between;
 }
 
+.pickFrom {
+  display: flex;
+  max-width: 50%;
+  margin-left: 2em;
+  margin-right: 2em;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
 .servedWord {
   border: 0.5px solid black;
   border-radius: 1px;
@@ -35,18 +45,19 @@
 /* IPHONE X */
 @media only screen and (min-width: 375px) and (max-width: 810px) {
   .wordsWrapper {
-    display: block;
-    margin: auto;
-    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .pickFrom {
+    min-width: 100%;
   }
 
   .servedWords {
-    display: flex;
-    max-width: 100%;
-    margin-left: 2em;
-    margin-right: 2em;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    flex-direction: row;
+    min-width: 100%;
+  }
+
+  .servedWord {
+    padding: 0.4em;
+    margin: 0.5em;
   }
 }

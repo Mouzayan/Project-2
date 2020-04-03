@@ -47,9 +47,10 @@ class Words extends Component {
       </li>
     ));
 
-    let conjunctionOptions = this.props.wordListConjunction.map(item => (
+    let conjunctionOptions = this.props.wordListConjunction.map((item, idx) => (
       <li
         className="servedWord"
+        key={idx}
         onClick={() => this.props.handleWordInput(item)}
       >
         {item.word}
@@ -58,11 +59,13 @@ class Words extends Component {
 
     return (
       <ul className="servedWords">
-        <li>{verbOptions}</li>
-        <li>{nounOptions}</li>
-        <li>{adverbOptions}</li>
-        <li>{adjectiveOptions}</li>
-        <li>{conjunctionOptions}</li>
+        <div className="pickFrom">
+        {verbOptions}
+        {nounOptions}
+        {adverbOptions}
+        {adjectiveOptions}
+          {conjunctionOptions}
+          </div>
       </ul>
     );
   }
