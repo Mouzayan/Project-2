@@ -37,146 +37,146 @@ class App extends Component {
     };
   }
 
-  componentDidMount = async () => {
-    for (let i = 0; i < 9; i += 1) {
-      const responseVerb = await axios({
-        method: "GET",
-        url: `https://wordsapiv1.p.rapidapi.com/words/`,
-        headers: {
-          "content-type": "application/octet-stream",
-          "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-          "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
-        },
-        params: {
-          random: "true",
-          partOfSpeech: "verb",
-          hasDetails: "syllables"
-        }
-      });
-      // console.log(responseVerb);
+  // componentDidMount = async () => {
+  //   for (let i = 0; i < 9; i += 1) {
+  //     const responseVerb = await axios({
+  //       method: "GET",
+  //       url: `https://wordsapiv1.p.rapidapi.com/words/`,
+  //       headers: {
+  //         "content-type": "application/octet-stream",
+  //         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+  //         "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
+  //       },
+  //       params: {
+  //         random: "true",
+  //         partOfSpeech: "verb",
+  //         hasDetails: "syllables"
+  //       }
+  //     });
+  //     // console.log(responseVerb);
 
-      if (
-        responseVerb.data.syllables &&
-        responseVerb.data.syllables.count < 4
-      ) {
-        const { word, syllables } = responseVerb.data;
-        if (responseVerb.data.syllables) {
-          this.setState({
-            resultsVerb: this.state.resultVerbs.push({
-              word: word,
-              count: syllables.count
-            })
-          });
-        } else {
-          i -= 1;
-        }
-      }
-    }
+  //     if (
+  //       responseVerb.data.syllables &&
+  //       responseVerb.data.syllables.count < 4
+  //     ) {
+  //       const { word, syllables } = responseVerb.data;
+  //       if (responseVerb.data.syllables) {
+  //         this.setState({
+  //           resultsVerb: this.state.resultVerbs.push({
+  //             word: word,
+  //             count: syllables.count
+  //           })
+  //         });
+  //       } else {
+  //         i -= 1;
+  //       }
+  //     }
+  //   }
 
-    for (let i = 0; i < 10; i += 1) {
-      const responseNoun = await axios({
-        method: "GET",
-        url: `https://wordsapiv1.p.rapidapi.com/words/`,
-        headers: {
-          "content-type": "application/octet-stream",
-          "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-          "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
-        },
-        params: {
-          random: "true",
-          partOfSpeech: "noun",
-          hasDetails: "syllables"
-        }
-      });
-      // console.log(responseNoun);
+  //   for (let i = 0; i < 10; i += 1) {
+  //     const responseNoun = await axios({
+  //       method: "GET",
+  //       url: `https://wordsapiv1.p.rapidapi.com/words/`,
+  //       headers: {
+  //         "content-type": "application/octet-stream",
+  //         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+  //         "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
+  //       },
+  //       params: {
+  //         random: "true",
+  //         partOfSpeech: "noun",
+  //         hasDetails: "syllables"
+  //       }
+  //     });
+  //     // console.log(responseNoun);
 
-      if (
-        responseNoun.data.syllables &&
-        responseNoun.data.syllables.count < 4
-      ) {
-        if (responseNoun.data.syllables) {
-          const { word, syllables } = responseNoun.data;
-          this.setState({
-            resultsNoun: this.state.resultNouns.push({
-              word: word,
-              count: syllables.count
-            })
-          });
-        } else {
-          i--;
-        }
-      }
-    }
+  //     if (
+  //       responseNoun.data.syllables &&
+  //       responseNoun.data.syllables.count < 4
+  //     ) {
+  //       if (responseNoun.data.syllables) {
+  //         const { word, syllables } = responseNoun.data;
+  //         this.setState({
+  //           resultsNoun: this.state.resultNouns.push({
+  //             word: word,
+  //             count: syllables.count
+  //           })
+  //         });
+  //       } else {
+  //         i--;
+  //       }
+  //     }
+  //   }
 
-    for (let i = 0; i < 10; i += 1) {
-      const responseAdverb = await axios({
-        method: "GET",
-        url: `https://wordsapiv1.p.rapidapi.com/words/`,
-        headers: {
-          "content-type": "application/octet-stream",
-          "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-          "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
-        },
-        params: {
-          random: "true",
-          partOfSpeech: "adverb",
-          hasDetails: "syllables"
-        }
-      });
-      // console.log(responseAdverb);
+  //   for (let i = 0; i < 10; i += 1) {
+  //     const responseAdverb = await axios({
+  //       method: "GET",
+  //       url: `https://wordsapiv1.p.rapidapi.com/words/`,
+  //       headers: {
+  //         "content-type": "application/octet-stream",
+  //         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+  //         "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
+  //       },
+  //       params: {
+  //         random: "true",
+  //         partOfSpeech: "adverb",
+  //         hasDetails: "syllables"
+  //       }
+  //     });
+  //     // console.log(responseAdverb);
 
-      if (
-        responseAdverb.data.syllables &&
-        responseAdverb.data.syllables.count < 4
-      ) {
-        if (responseAdverb.data.syllables) {
-          const { word, syllables } = responseAdverb.data;
-          this.setState({
-            resultsAdverb: this.state.resultAdverbs.push({
-              word: word,
-              count: syllables.count
-            })
-          });
-        } else {
-          i--;
-        }
-      }
-    }
+  //     if (
+  //       responseAdverb.data.syllables &&
+  //       responseAdverb.data.syllables.count < 4
+  //     ) {
+  //       if (responseAdverb.data.syllables) {
+  //         const { word, syllables } = responseAdverb.data;
+  //         this.setState({
+  //           resultsAdverb: this.state.resultAdverbs.push({
+  //             word: word,
+  //             count: syllables.count
+  //           })
+  //         });
+  //       } else {
+  //         i--;
+  //       }
+  //     }
+  //   }
 
-    for (let i = 0; i < 10; i += 1) {
-      const responseAdjective = await axios({
-        method: "GET",
-        url: `https://wordsapiv1.p.rapidapi.com/words/`,
-        headers: {
-          "content-type": "application/octet-stream",
-          "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-          "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
-        },
-        params: {
-          random: "true",
-          partOfSpeech: "adjective",
-          hasDetails: "syllables"
-        }
-      });
-      // console.log(responseAdjective);
+  //   for (let i = 0; i < 10; i += 1) {
+  //     const responseAdjective = await axios({
+  //       method: "GET",
+  //       url: `https://wordsapiv1.p.rapidapi.com/words/`,
+  //       headers: {
+  //         "content-type": "application/octet-stream",
+  //         "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+  //         "x-rapidapi-key": "960eb1aa43msh14120de21c57712p123f2djsnb20a9c6e475c"
+  //       },
+  //       params: {
+  //         random: "true",
+  //         partOfSpeech: "adjective",
+  //         hasDetails: "syllables"
+  //       }
+  //     });
+  //     // console.log(responseAdjective);
 
-      if (
-        responseAdjective.data.syllables &&
-        responseAdjective.data.syllables.count < 4
-      ) {
-        if (responseAdjective.data.syllables) {
-          const { word, syllables } = responseAdjective.data;
-          this.setState({
-            resultsAdjective: this.state.resultAdjectives.push({
-              word: word,
-              count: syllables.count
-            })
-          });
-        } else {
-          i--;
-        }
-      }
-    }
+  //     if (
+  //       responseAdjective.data.syllables &&
+  //       responseAdjective.data.syllables.count < 4
+  //     ) {
+  //       if (responseAdjective.data.syllables) {
+  //         const { word, syllables } = responseAdjective.data;
+  //         this.setState({
+  //           resultsAdjective: this.state.resultAdjectives.push({
+  //             word: word,
+  //             count: syllables.count
+  //           })
+  //         });
+  //       } else {
+  //         i--;
+  //       }
+  //     }
+  //   }
 
     this.setState({
       conjLoop: [
