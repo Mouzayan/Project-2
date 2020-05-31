@@ -17,6 +17,16 @@ console.log(this.props.wordListConjunction)
       >
         {item}
       </li>
+    ));
+  
+    let wordOptions = this.props.wordListWord.map((item, idx) => (
+      <li
+        className="servedWord"
+        key={idx}
+        onClick={() => this.props.handleWordInput(item)}
+      >
+        {item}
+      </li>
       ));
 
 
@@ -26,7 +36,7 @@ console.log(this.props.wordListConjunction)
         <div className="pickFrom">
         
           {conjunctionOptions}
-          {/* {wordOptions} */}
+          {wordOptions}
           </div>
       </ul>
     );

@@ -42,7 +42,49 @@ class App extends Component {
         { word: "yikes", count: 1 },
         { word: "either", count: 2 }
       ],
-      wordLoop: [],
+      wordLoop: [
+        { word: "a", count: 1 }, { word: "about", count: 1 }, { word: "above", count: 1 },
+        { word: "ache", count: 1 }, { word: "ad", count: 1 }, { word: "after", count: 1 },
+        { word: "all", count: 1 }, { word: "am", count: 1 }, { word: "an", count: 1 },
+        { word: "apparatus", count: 1 }, { word: "are", count: 1 }, { word: "arm", count: 1 },
+        { word: "as", count: 1 }, { word: "ask", count: 1 }, { word: "at", count: 1 },
+        { word: "away", count: 1 }, { word: "bare", count: 1 }, { word: "be", count: 1 },
+        { word: "beat", count: 1 }, { word: "beauty", count: 1 }, { word: "bed", count: 1 },
+        { word: "beneath", count: 1 }, { word: "bitter", count: 1 }, { word: "black", count: 1 },
+        { word: "blood", count: 1 }, { word: "blow", count: 1 }, { word: "blue", count: 1 },
+        { word: "boil", count: 1 }, { word: "boy", count: 1 }, { word: "breast", count: 1 },
+        { word: "but", count: 1 }, { word: "butt", count: 1 }, { word: "by", count: 1 },
+        { word: "can", count: 1 }, { word: "chant", count: 1 }, { word: "chocolate", count: 1 },
+        { word: "cool", count: 1 }, { word: "could", count: 1 }, { word: "crush", count: 1 },
+        { word: "cry", count: 1 }, { word: "day", count: 1 }, { word: "death", count: 1 },
+        { word: "delirious", count: 1 }, { word: "diamond", count: 1 }, { word: "did", count: 1 },
+        { word: "do", count: 1 }, { word: "dream", count: 1 }, { word: "dress", count: 1 },
+        { word: "drive", count: 1 }, { word: "drool", count: 1 }, { word: "drunk", count: 1 },
+        { word: "eat", count: 1 }, { word: "ed", count: 1 }, { word: "egg", count: 1 },
+        { word: "elaborate", count: 1 }, { word: "enormous", count: 1 }, { word: "fast", count: 1 },
+        { word: "feel", count: 1 }, { word: "fiddle", count: 1 }, { word: "finger", count: 1 },
+        { word: "fluff", count: 1 }, { word: "for", count: 1 }, { word: "forest", count: 1 },
+        { word: "frantic", count: 1 }, { word: "friend", count: 1 }, { word: "from", count: 1 },
+        { word: "garden", count: 1 }, { word: "girl", count: 1 }, { word: "go", count: 1 },
+        { word: "goddess", count: 1 }, { word: "gorgeous", count: 1 }, { word: "gown", count: 1 },
+        { word: "hair", count: 1 }, { word: "has", count: 1 }, { word: "have", count: 1 },
+        { word: "he", count: 1 }, { word: "head", count: 1 }, { word: "heave", count: 1 },
+        { word: "her", count: 1 }, { word: "here", count: 1 }, { word: "him", count: 1 },
+        { word: "his", count: 1 }, { word: "honey", count: 1 }, { word: "hot", count: 1 },
+        { word: "how", count: 1 }, { word: "I", count: 1 }, { word: "if", count: 1 },
+        { word: "in", count: 1 }, { word: "ing", count: 1 }, { word: "is", count: 1 },
+        { word: "it", count: 1 }, { word: "juice", count: 1 }, { word: "lake", count: 1 },
+        { word: "language", count: 1 }, { word: "languid", count: 1 }, { word: "lather", count: 1 },
+        { word: "lazy", count: 1 }, { word: "less", count: 1 }, { word: "let", count: 1 },
+        { word: "lick", count: 1 }, { word: "lie", count: 1 }, { word: "life", count: 1 },
+        { word: "light", count: 1 }, { word: "like", count: 1 }, { word: "love", count: 1 },
+        { word: "luscious", count: 1 }, { word: "lust", count: 1 }, { word: "mad", count: 1 },
+        { word: "man", count: 1 }, { word: "me", count: 1 }, { word: "mean", count: 1 },
+        { word: "meat", count: 1 }, { word: "men", count: 1 }, { word: "milk", count: 1 },
+        { word: "mist", count: 1 }, { word: "moan", count: 1 }, { word: "moon", count: 1 },
+        { word: "mother", count: 1 }, { word: "music", count: 1 }, { word: "must", count: 1 },
+        { word: "my", count: 1 }, { word: "need", count: 1 }, { word: "never", count: 1 }, 
+     ],
 
       lineOne: {
         syllableCount: 0,
@@ -60,68 +102,26 @@ class App extends Component {
   }
   
     async componentDidMount() {
-     
       let testArray = [];
-    if (this.state.conjLoop.length > 0) {
       for (let i = 0; i < 5; i += 1) {
       testArray.push(
         this.state.conjLoop[Math.floor(Math.random() * this.state.conjLoop.length)
         ].word
       ); }
-       
-    }
-      console.log(testArray)
-     ;
-     console.log(this.state.conjLoop)
+    //   console.log(testArray)
+    //  console.log(this.state.conjLoop)
     this.setState({ resultConjunctions: testArray });
   
     
-   this.setState({
-    wordLoop: [
-       { word: "a", count: 1 }, { word: "about", count: 1 }, { word: "above", count: 1 },
-       { word: "ache", count: 1 }, { word: "ad", count: 1 }, { word: "after", count: 1 },
-       { word: "all", count: 1 }, { word: "am", count: 1 }, { word: "an", count: 1 },
-       { word: "apparatus", count: 1 }, { word: "are", count: 1 }, { word: "arm", count: 1 },
-       { word: "as", count: 1 }, { word: "ask", count: 1 }, { word: "at", count: 1 },
-       { word: "away", count: 1 }, { word: "bare", count: 1 }, { word: "be", count: 1 },
-       { word: "beat", count: 1 }, { word: "beauty", count: 1 }, { word: "bed", count: 1 },
-       { word: "beneath", count: 1 }, { word: "bitter", count: 1 }, { word: "black", count: 1 },
-       { word: "blood", count: 1 }, { word: "blow", count: 1 }, { word: "blue", count: 1 },
-       { word: "boil", count: 1 }, { word: "boy", count: 1 }, { word: "breast", count: 1 },
-       { word: "but", count: 1 }, { word: "butt", count: 1 }, { word: "by", count: 1 },
-       { word: "can", count: 1 }, { word: "chant", count: 1 }, { word: "chocolate", count: 1 },
-       { word: "cool", count: 1 }, { word: "could", count: 1 }, { word: "crush", count: 1 },
-       { word: "cry", count: 1 }, { word: "day", count: 1 }, { word: "death", count: 1 },
-       { word: "delirious", count: 1 }, { word: "diamond", count: 1 }, { word: "did", count: 1 },
-       { word: "do", count: 1 }, { word: "dream", count: 1 }, { word: "dress", count: 1 },
-       { word: "drive", count: 1 }, { word: "drool", count: 1 }, { word: "drunk", count: 1 },
-       { word: "eat", count: 1 }, { word: "ed", count: 1 }, { word: "egg", count: 1 },
-       { word: "elaborate", count: 1 }, { word: "enormous", count: 1 }, { word: "fast", count: 1 },
-       { word: "feel", count: 1 }, { word: "fiddle", count: 1 }, { word: "finger", count: 1 },
-       { word: "fluff", count: 1 }, { word: "for", count: 1 }, { word: "forest", count: 1 },
-       { word: "frantic", count: 1 }, { word: "friend", count: 1 }, { word: "from", count: 1 },
-       { word: "garden", count: 1 }, { word: "girl", count: 1 }, { word: "go", count: 1 },
-       { word: "goddess", count: 1 }, { word: "gorgeous", count: 1 }, { word: "gown", count: 1 },
-       { word: "hair", count: 1 }, { word: "has", count: 1 }, { word: "have", count: 1 },
-       { word: "he", count: 1 }, { word: "head", count: 1 }, { word: "heave", count: 1 },
-       { word: "her", count: 1 }, { word: "here", count: 1 }, { word: "him", count: 1 },
-       { word: "his", count: 1 }, { word: "honey", count: 1 }, { word: "hot", count: 1 },
-       { word: "his", count: 1 }, { word: "honey", count: 1 }, { word: "hot", count: 1 },
-       
-
-    
-      
-    ]
-  });
   let wordArray = [];
   for (let i = 0; i < 31; i += 1) {
     wordArray.push(
       this.state.wordLoop[
         Math.floor(Math.random() * this.state.wordLoop.length)
-      ]
+      ].word
     );
   }
-  this.setState.bind({ resultWords: wordArray });
+  this.setState({ resultWords: wordArray });
 };
 
   handleWordInput = item => {
@@ -199,10 +199,6 @@ class App extends Component {
               <div className="wordsWrapper">
                 <div className="wordsDiv">
                   <Words
-                    // wordListVerb={this.state.resultVerbs}
-                    // wordListNoun={this.state.resultNouns}
-                    // wordListAdverb={this.state.resultAdverbs}
-                    // wordListAdjective={this.state.resultAdjectives}
                     wordListConjunction={this.state.resultConjunctions}
                     wordListWord={this.state.resultWords}
                     handleWordInput={this.handleWordInput}
