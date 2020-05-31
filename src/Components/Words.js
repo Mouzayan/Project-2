@@ -6,65 +6,27 @@ class Words extends Component {
     super(props);
   }
 
-  render() {
-    let verbOptions = this.props.wordListVerb.map((item, idx) => (
-      <li
-        className="servedWord"
-        key={idx}
-        onClick={() => this.props.handleWordInput(item)}
-      >
-        {item.word}
-      </li>
-    ));
-
-    let nounOptions = this.props.wordListNoun.map((item, idx) => (
-      <li
-        className="servedWord"
-        key={idx}
-        onClick={() => this.props.handleWordInput(item)}
-      >
-        {item.word}
-      </li>
-    ));
-
-    let adverbOptions = this.props.wordListAdverb.map((item, idx) => (
-      <li
-        className="servedWord"
-        key={idx}
-        onClick={() => this.props.handleWordInput(item)}
-      >
-        {item.word}
-      </li>
-    ));
-
-    let adjectiveOptions = this.props.wordListAdjective.map((item, idx) => (
-      <li
-        className="servedWord"
-        key={idx}
-        onClick={() => this.props.handleWordInput(item)}
-      >
-        {item.word}
-      </li>
-    ));
-
+render() {
+  
+console.log(this.props.wordListConjunction)
     let conjunctionOptions = this.props.wordListConjunction.map((item, idx) => (
       <li
         className="servedWord"
         key={idx}
         onClick={() => this.props.handleWordInput(item)}
       >
-        {item.word}
+        {item}
       </li>
-    ));
+      ));
+
+
 
     return (
       <ul className="servedWords">
         <div className="pickFrom">
-        {verbOptions}
-        {nounOptions}
-        {adverbOptions}
-        {adjectiveOptions}
+        
           {conjunctionOptions}
+          {/* {wordOptions} */}
           </div>
       </ul>
     );
