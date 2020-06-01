@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
-import axios from "axios";
 import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -106,22 +105,22 @@ class App extends Component {
       for (let i = 0; i < 5; i += 1) {
       testArray.push(
         this.state.conjLoop[Math.floor(Math.random() * this.state.conjLoop.length)
-        ].word
+        ]
       ); }
-    //   console.log(testArray)
-    //  console.log(this.state.conjLoop)
+      console.log(testArray)
+     console.log(this.state.conjLoop)
     this.setState({ resultConjunctions: testArray });
   
     
-  let wordArray = [];
+  let nextArray = [];
   for (let i = 0; i < 31; i += 1) {
-    wordArray.push(
+    nextArray.push(
       this.state.wordLoop[
         Math.floor(Math.random() * this.state.wordLoop.length)
-      ].word
+      ]
     );
   }
-  this.setState({ resultWords: wordArray });
+  this.setState({ resultWords: nextArray });
 };
 
   handleWordInput = item => {
@@ -162,7 +161,7 @@ class App extends Component {
 
   
   render() {
-    if (this.state.resultConjunctions.length > 0) {
+    // if (this.state.resultConjunctions.length > 0) {
       return (
         <>
           <div className="App">
@@ -212,9 +211,9 @@ class App extends Component {
           </footer>
         </>
       );
-    } else {
-      return <div></div>
-    }
+    // } else {
+    //   return <div></div>
+    // }
   }
 }
 

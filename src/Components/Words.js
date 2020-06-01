@@ -8,14 +8,14 @@ class Words extends Component {
 
 render() {
   
-console.log(this.props.wordListConjunction)
+// console.log(this.props.wordListConjunction)
     let conjunctionOptions = this.props.wordListConjunction.map((item, idx) => (
       <li
         className="servedWord"
         key={idx}
         onClick={() => this.props.handleWordInput(item)}
       >
-        {item}
+        {item.word}
       </li>
     ));
   
@@ -25,7 +25,7 @@ console.log(this.props.wordListConjunction)
         key={idx}
         onClick={() => this.props.handleWordInput(item)}
       >
-        {item}
+        {item.word}
       </li>
       ));
 
